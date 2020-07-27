@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burningram <burningram@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mjuli <mjuli@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 19:21:03 by mjuli             #+#    #+#             */
-/*   Updated: 2020/07/27 01:28:53 by burningram       ###   ########.fr       */
+/*   Updated: 2020/07/27 19:26:09 by mjuli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int			get_next_line(int fd, char **line)
 {
 	static t_gnl_state	state;
 
-	if (fd < 0 || BUFFER_SIZE < 0 || line == NULL)
+	if (fd < 0 || BUFFER_SIZE <= 0 || line == NULL)
 		return (-1);
 	gnl_state_init(&state, fd);
 	while (1)
